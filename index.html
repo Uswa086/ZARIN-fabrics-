@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARIN Fabrics | Premium Unstitched Collection</title>
+  <meta name="description" content="Discover premium unstitched fabrics for ladies and gents at ZARIN Fabrics.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#home" class="brand">
+    <span class="brand-symbol">Z</span>
+    <span>ZARIN<small>FABRICS & COLLECTION</small></span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+  <nav id="navMenu">
+    <a href="#home">Home</a>
+    <a href="#ladies">Ladies</a>
+    <a href="#gents">Gents</a>
+    <a href="#shop">All Fabrics</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="nav-order" href="https://wa.me/923157540218" target="_blank" rel="noopener">
+    WhatsApp ↗
+  </a>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <p class="eyebrow">THE ART OF BEAUTIFUL FABRICS</p>
+      <h1>Timeless Fabrics<br>For Every <em>Occasion</em></h1>
+      <p>
+        Discover beautiful unstitched fabrics for ladies and gents.
+        Find your favourite colours, textures and styles at ZARIN.
+      </p>
+      <a class="gold-button" href="#shop">Explore Collection <span>→</span></a>
+      <div class="hero-trust">
+        <span>✦ Premium Selection</span>
+        <span>✦ Ladies & Gents</span>
+        <span>✦ Easy WhatsApp Orders</span>
+      </div>
+    </div>
+    <div class="hero-stamp">ZARIN<small>YOUR STYLE, YOUR STORY</small></div>
+  </section>
+
+  <section class="quick-links">
+    <a href="#ladies"><span>✿</span><b>Ladies Collection</b><small>Elegant colours & prints</small></a>
+    <a href="#gents"><span>◇</span><b>Gents Collection</b><small>Classic fabric choices</small></a>
+    <a href="#shop"><span>✧</span><b>Explore Fabrics</b><small>Discover every variety</small></a>
+    <a href="#contact"><span>♡</span><b>Personal Service</b><small>Contact us directly</small></a>
+  </section>
+
+  <section class="section collection-feature" id="ladies">
+    <div class="feature-image ladies-image">
+      <span class="image-label">LADIES EDITION</span>
+    </div>
+    <div class="feature-copy">
+      <p class="eyebrow">COLOURS OF ELEGANCE</p>
+      <h2>Ladies <em>Collection</em></h2>
+      <p>
+        Explore unstitched lawn, cotton, embroidered fabric, linen
+        and seasonal varieties. Choose beautiful fabric for everyday
+        wear, family gatherings and special occasions.
+      </p>
+      <ul>
+        <li>Printed Lawn & Cotton</li>
+        <li>Embroidered Fabrics</li>
+        <li>Khaddar & Linen</li>
+      </ul>
+      <button class="outline-button" data-jump="Ladies">Explore Ladies →</button>
+    </div>
+  </section>
+
+  <section class="section collection-feature reverse" id="gents">
+    <div class="feature-image gents-image">
+      <span class="image-label">GENTS EDITION</span>
+    </div>
+    <div class="feature-copy">
+      <p class="eyebrow">CLASSIC. CONFIDENT. TIMELESS.</p>
+      <h2>Gents <em>Collection</em></h2>
+      <p>
+        Discover unstitched cotton, wash & wear, linen, khaddar
+        and other fabric varieties for traditional and modern tailoring.
+      </p>
+      <ul>
+        <li>Classic Cotton</li>
+        <li>Wash & Wear</li>
+        <li>Boski & Seasonal Fabrics</li>
+      </ul>
+      <button class="outline-button" data-jump="Gents">Explore Gents →</button>
+    </div>
+  </section>
+
+  <section class="section shop-section" id="shop">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">FIND YOUR PERFECT FABRIC</p>
+        <h2>Featured <em>Collections</em></h2>
+        <p class="muted">Select a fabric card to view its picture and description.</p>
+      </div>
+      <div class="search-tools">
+        <input id="searchInput" type="search" placeholder="Search fabrics...">
+        <select id="audienceFilter" aria-label="Choose collection">
+          <option value="All">All Collections</option>
+          <option value="Ladies">Ladies</option>
+          <option value="Gents">Gents</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-chip active" data-filter="All">All Fabrics</button>
+      <button class="filter-chip" data-filter="Lawn">Lawn</button>
+      <button class="filter-chip" data-filter="Cotton">Cotton</button>
+      <button class="filter-chip" data-filter="Wash & Wear">Wash & Wear</button>
+      <button class="filter-chip" data-filter="Khaddar">Khaddar</button>
+      <button class="filter-chip" data-filter="Linen">Linen</button>
+      <button class="filter-chip" data-filter="Embroidered">Embroidered</button>
+      <button class="filter-chip" data-filter="Boski">Boski</button>
+    </div>
+
+    <p class="results-count" id="resultsCount"></p>
+    <div class="product-grid" id="productGrid"></div>
+    <p class="empty-state" id="emptyState" hidden>No fabric found. Try another search.</p>
+  </section>
+
+  <section class="style-banner">
+    <div>
+      <p class="eyebrow">MADE FOR YOUR OWN STYLE</p>
+      <h2>Your Style.<br><em>Your Passion.</em></h2>
+      <p>Choose the fabric. Create the outfit that feels like you.</p>
+      <a href="#shop" class="gold-button">Find Your Fabric →</a>
+    </div>
+  </section>
+
+  <section class="section about-section" id="about">
+    <div class="about-photo">
+      <img
+        src="shop.jpg"
+        alt="ZARIN fabric shop interior"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=1000&q=85';">
+      <span class="photo-caption">A WORLD OF FABRICS</span>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">WELCOME TO ZARIN</p>
+      <h2>About <em>Our Story</em></h2>
+      <p>
+        At ZARIN Fabrics, we believe every beautiful outfit begins
+        with the right fabric. Our collection is designed around the
+        joy of choosing colours, textures and patterns that express
+        your personal style.
+      </p>
+      <p>
+        We focus on unstitched fabrics for ladies and gents, including
+        lawn, cotton, wash & wear, khaddar, linen, embroidered options
+        and other seasonal varieties.
+      </p>
+      <p>
+        Whether you are choosing everyday fabric or something special
+        for a celebration, we want you to have clear product details
+        and a convenient way to ask questions before buying.
+      </p>
+      <p>
+        Contact us directly to confirm the latest designs, fabric
+        length, actual price, availability and delivery details.
+        We are happy to help you find a fabric that suits your needs.
+      </p>
+      <a class="text-link" href="#contact">Get in Touch →</a>
+    </div>
+  </section>
+
+  <section class="service-strip">
+    <div><span>✧</span><b>Carefully Selected</b><small>Explore fabric varieties</small></div>
+    <div><span>◇</span><b>More Choices</b><small>Ladies and gents styles</small></div>
+    <div><span>♡</span><b>Direct Contact</b><small>Ask before you order</small></div>
+    <div><span>↗</span><b>Easy Ordering</b><small>WhatsApp assistance</small></div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section contact-inner">
+      <div>
+        <p class="eyebrow">LET'S TALK FABRICS</p>
+        <h2>We'd Love to<br><em>Hear From You.</em></h2>
+        <p class="muted">Ask about fabric prices, designs, stock and delivery.</p>
+      </div>
+      <div class="contact-card">
+        <p><span>WHATSAPP</span><a href="https://wa.me/923157540218" target="_blank" rel="noopener">0315 7540218</a></p>
+        <p><span>EMAIL</span><a href="mailto:uswanazish311@gmail.com">uswanazish311@gmail.com</a></p>
+        <p><span>LOCATION</span><strong>Khanewal, Kacha Khu</strong></p>
+        <a class="gold-button" href="https://wa.me/923157540218?text=Assalam-o-alaikum%2C%20I%20want%20to%20ask%20about%20your%20fabric%20collection." target="_blank" rel="noopener">Message on WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <a href="#home" class="brand">
+    <span class="brand-symbol">Z</span>
+    <span>ZARIN<small>FABRICS & COLLECTION</small></span>
+  </a>
+  <p>Unstitched fabrics for your own style.</p>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#shop">Shop</a>
+    <a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <p class="payment-note">Payment and delivery methods are confirmed directly with the seller.</p>
+  <small>© <span id="year"></span> ZARIN Fabrics. All rights reserved.</small>
+</footer>
+
+<dialog id="fabricDialog">
+  <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+  <div id="dialogBody"></div>
+</dialog>
+
+</body>
+  </html>
